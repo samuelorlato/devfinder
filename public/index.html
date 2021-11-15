@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./style.css">
+    <title>devfinder</title>
+</head>
+<body class="h-screen w-screen flex flex-col items-center justify-center bg-black">
+    <div class="container max-w-lg bg-black p-4 rounded">
+        <h1 class="font-monospace text-white mb-6 text-2xl"><span class="text-primary">dev</span>finder</h1>
+        <div class="flex flex-col">
+            <div class="flex flex-row p-3 pl-4 pr-5 rounded-lg bg-gray font-monospace text-white">
+                <i data-feather="search" class="mr-3 text-primary"></i>
+                <input class="bg-gray font-monospace text-white placeholder-white focus:outline-none focus:ring-0 focus:border-transparent" type="text" placeholder="Search Github username" id="search-input">
+                <button class="flex-1 rounded-lg bg-primary text-white pr-5 pl-5" onclick="getUser()">Search</button>
+            </div>
+            <div id="result" class="hidden mt-2 flex flex-row p-3 pl-5 pr-5 rounded-lg items-center bg-gray font-monospace text-white">
+                <img id="profile-image" class="rounded-full w-24 mr-5">
+                <div>
+                    <p class="font-monospace text-white text-xl" id="profile-name"></p>
+                    <a href="" target="blank" class="font-monospace text-primary text-base" id="profile-user"></a>
+                    <p class="font-monospace text-lightgray text-base" id="profile-bio"></p>
+                    <div class="flex flex-row" id="location-div">
+                        <i data-feather="map-pin" class="mr-2 w-4 text-lightgray"></i>
+                        <p class="font-monospace text-lightgray text-base" id="profile-location"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace()
+    </script>      
+    <script src="./script.js"></script>
+</body>
+</html>
